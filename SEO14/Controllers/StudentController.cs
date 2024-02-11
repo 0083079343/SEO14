@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SEO14.Models;
+using SEO14.Models.ViewModels;
+
 
 namespace SEO14.Controllers
 {
@@ -13,6 +15,27 @@ namespace SEO14.Controllers
         public ActionResult Index()
         {
             return View(db.Students.ToList());
+        }
+
+
+        public ActionResult List()
+        {
+         var list1= db.Students.Select(t => new {t.Name,t.Family,t.PhoneNumber,t.Password}).ToList();
+        
+            List<StudentViewModels> students = new List<StudentViewModels>();
+            foreach (var item in list1)
+            {
+                students.Add(new StudentViewModels()
+                {
+                    Name = item.Name,
+                    Family = item.Family,
+                    Password = item.Password,         
+                    
+                    PhoneNumber = item.PhoneNumber
+                });
+            }
+
+            return View(students);
         }
     }
 }
