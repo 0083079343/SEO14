@@ -164,6 +164,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbStudentContext.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\ViewModels\LodinViewModel.cs" />
     <Compile Include="Models\ViewModels\StudentViewModels.cs" />
     <Compile Include="OtherClasses\PersianCulture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,6 +219,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Views\Student\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
